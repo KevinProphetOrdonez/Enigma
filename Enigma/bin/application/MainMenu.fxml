@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="439.0" prefWidth="1202.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainMenuController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu fx:id="RunBtn" mnemonicParsing="false" text="Run">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#RunEnigma" onMenuValidation="#RunEnigma" text="Run Enigma" />
+               </items>
+            </Menu>
+            <Menu fx:id="SettingBtn" mnemonicParsing="false" text="Setting">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu fx:id="HelpBtn" mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <right>
+            <TextArea fx:id="CypherTextArea" prefHeight="322.0" prefWidth="400.0" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <HBox prefHeight="13.0" prefWidth="984.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefHeight="27.0" prefWidth="30.0" />
+                  <Label text="Plain">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="27.0" prefWidth="735.0" HBox.hgrow="NEVER" />
+                  <Label text="Coded">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="27.0" prefWidth="30.0" />
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <TextArea fx:id="PlainTextArea" prefHeight="322.0" prefWidth="400.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@Nazi.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+   </center>
+   <bottom>
+      <GridPane prefHeight="90.0" prefWidth="1213.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="603.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1172.0" minWidth="10.0" prefWidth="601.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Switch Board">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Wire 1" GridPane.columnIndex="1" />
+            <Label text="Wire 2" GridPane.columnIndex="2" />
+            <Label text="Switch A" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Wire 3" GridPane.columnIndex="3" />
+            <Label text="Wire 4" GridPane.columnIndex="4" />
+            <Label text="Wire 5" GridPane.columnIndex="5" />
+            <Label text="Wire 6" GridPane.columnIndex="6" />
+            <Label text="Wire 7" GridPane.columnIndex="7" />
+            <Label text="wire 8" GridPane.columnIndex="8" />
+            <Label text="Wire 9" GridPane.columnIndex="9" />
+            <Label text="Wire 10" GridPane.columnIndex="10" />
+            <Label text="Switch B" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="WireA1" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="WireB1" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="WireA2" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireB2" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireC1" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="WireC2" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireD1" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="WireD2" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireE1" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="WireE2" prefWidth="150.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireF1" prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="WireF2" prefWidth="150.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireG1" prefWidth="150.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="WireG2" prefWidth="150.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireH2" prefWidth="150.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireH1" prefWidth="150.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="WireI1" prefWidth="150.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="WireI2" prefWidth="150.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireJ2" prefWidth="150.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="WireJ1" prefWidth="150.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </bottom>
+   <left>
+      <GridPane style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="101.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="99.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="105.0" text="Wheel Position" GridPane.columnIndex="1" />
+            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="100.0" text="Starting Point" GridPane.columnIndex="2" />
+            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="105.0" text="Rotor 1" GridPane.rowIndex="1" />
+            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="105.0" text="Rotor 2" GridPane.rowIndex="2" />
+            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="105.0" text="Rotor 3" GridPane.rowIndex="3" />
+            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="105.0" text="Rotor 4" GridPane.rowIndex="4" />
+            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="105.0" text="Rotor 5" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="Rotor1Pos" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="Rotor2Pos" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="Rotor3Pos" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="Rotor4Pos" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ChoiceBox fx:id="Rotor5Pos" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="Rotor1Start" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="Rotor2Start" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="Rotor3Start" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="Rotor4Start" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <ChoiceBox fx:id="Rotor5Start" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </left>
+</BorderPane>
